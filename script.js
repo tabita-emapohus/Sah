@@ -191,3 +191,17 @@ function smilyFaceTabita() {
      circle(565,410,50);
 
 }
+function generateCirclePositions() {
+    circlePositions = [];
+    for (let i = 0; i < 16; i++) {
+        let x = random(width);
+        let y = random(height);
+        circlePositions.push({ x: x, y: y });
+    }
+}
+
+function keyPressed() {
+    if (keyCode == ENTER) {
+        generateCirclePositions();
+    }
+}
